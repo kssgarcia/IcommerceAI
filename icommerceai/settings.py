@@ -36,6 +36,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1', 'https://localhost']
 INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
+    "knox",
 
     "django.contrib.admin",
     "django.contrib.auth",
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     "livereload",
 
     "api",
+    "users",
+    "app",
 ]
 
 MIDDLEWARE = [
@@ -95,6 +98,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'users.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
